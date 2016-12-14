@@ -21,3 +21,7 @@
 
 en:
   hello: "Hello world"
+en:
+  courses:
+    new:
+      add_course: "Add a course"
