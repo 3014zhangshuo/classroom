@@ -32,16 +32,28 @@ RSpec.describe CoursesController do
     end
 
     describe 'GET new' do
+      context "when use login" do
         it 'assigns @course' do
+            user = create(:user)
             course = build(:course)
+            sign_in user
             get :new
             expect(assigns(:course)).to be_a_new(Course)
         end
         it 'render template' do
+            user = create(:user)          
             course = build(:course)
+            sign_in user
             get :new
             expect(response).to render_template('new')
         end
+      end
+      context "when user not login" do
+        it "redirect_to new_user_session_path" do
+          get :new
+          expect(response).to redirect_to new_user_session_path
+        end
+      end
     end
 
     describe 'POST create' do
