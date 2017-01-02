@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 gem "bootstrap-sass"
 gem 'devise'
 gem 'simple_form'
+gem "omniauth-wechat-oauth2"
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "rspec-rails", "~> 3.5.2"
@@ -39,7 +40,7 @@ group :development, :test do
   gem "factory_girl_rails", "~> 4.7.0"
   gem "shoulda-matchers", "~> 3.1.1"
   gem 'capybara'
-  gem "database_rewinder"
+  #gem "database_rewinder"
   gem "formulaic"
   gem 'byebug', platform: :mri
 end
